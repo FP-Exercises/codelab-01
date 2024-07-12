@@ -8,9 +8,10 @@ public class CounterTest {
 
     @Test
     void testIncreaseCounter() {
-        Counter counter = new Counter(100, 10, 10);
+        Counter counter = new Counter(100, 10, 110);
+        int lastValue = counter.getCounter();
         counter.increaseCounter();
-        int expected = counter.getInitValue() + counter.getStepSize();
+        int expected = lastValue + counter.getStepSize();
         assertEquals(expected, counter.getCounter());
     }
 
